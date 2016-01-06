@@ -1,0 +1,20 @@
+  <ion-header-bar>
+    <button class="button button-light icon ion-ios7-undo-outline" ng-click='closeModal()'></button>
+    <h1 class="title">More Images</h1>
+  </ion-header-bar>
+
+<ion-slide-box does-continue='true' auto-play='true'>
+  <ion-slide ng-repeat='image in products.images'>
+    <div class='image-slide-div text-center'>
+      <img ng-src={{image}} class='image-slide'/>
+    </div>
+  </ion-slide>
+</ion-slide-box>
+
+<div ng-show="itemSelected">
+      Description: {{item.itemDescription}}<br>
+      Title: {{item.itemtitle}}<br>
+      Price: {{item.itemprice}}<br>
+      Image: <img ng-src=" {{item.itemimage}}"  class='image-slide' >
+    </div>
+

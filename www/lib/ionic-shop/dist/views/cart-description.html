@@ -1,0 +1,17 @@
+﻿<div ng-if='!emptyProducts'>
+    <div class='card product-card' ng-repeat='product in products track by $index'>
+        <div class='item item-thumbnail-right product-item'>
+            <img ng-src='{{product.images[0]}}' class='product-image' ion-product-image='product'>
+            <h3 class='product-title'>{{product.title}}</h3><br />
+            <p class='product-description'>{{product.description}}</p><br />
+            <div>
+                <span class='product-quantity'>{{product.purchaseQuantity}}*{{product.price}}</span>
+            </div><br />
+            <span class='product-price'>${{product.price*product.purchaseQuantity}}</span>
+        </div>
+    </div>
+</div>
+<div class='empty-cart-div' ng-if='emptyProducts'>
+    <h3 class='empty-cart-header'>Your bag is empty!</h3>
+    <i class='icon ion-bag empty-cart-icon'></i>
+</div>

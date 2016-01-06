@@ -1,0 +1,8 @@
+<div class='list'>
+    <div class='card item item-avatar' ng-repeat='product in products| startsWithLetter : value'>
+        <img ng-src='{{product.images[0]}}' class='gallery-product-image' ng-click="viewDetails(product)">
+        <h3 class='gallery-product-title'>{{product.title}}</h3>
+        <h3 class='gallery-product-price'>{{product.price}}</h3>
+        <div class='button button-balanced button-small' style='float:right;' ng-click='addToCart(product)'>Add To Cart</div>
+    </div>
+</div>

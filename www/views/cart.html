@@ -1,0 +1,35 @@
+<!--<ion-header-bar class="bar-dark">
+
+  <button class='button icon ion-arrow-left-a' ng-click='goToGallery()'></button>
+  <h1 class="title">Ionic Shopping Cart</h1>
+</ion-header-bar>
+
+<ion-content>
+  <ion-cart products='cartProducts'></ion-cart>
+</ion-content>
+
+<ion-cart-footer path='checkoutPath'></ion-cart-footer>-->
+<!-- changes done by raj
+-->
+
+<ion-header-bar class="bar-dark">
+    <button class='button icon ion-arrow-left-a' ng-click='goToGallery()'></button>
+    <h1 class="title">Ionic Shopping Cart</h1>
+</ion-header-bar>
+<ion-tabs class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+    <ion-tab title="Selected items">
+        <ion-content style="margin-top:85px;">
+                <ion-cart products='cartProducts'></ion-cart>
+        </ion-content>
+    </ion-tab>
+    <ion-tab title="Descriptions">
+        <ion-content>
+            <div class='empty-cart-div'>
+                <!--<h3 class='empty-cart-header'>Ionic Shopping Cart</h3>-->
+                <!--<i class='icon ion-bag empty-cart-icon'></i>-->
+                <ion-description products='cartProducts'></ion-description>
+            </div>
+        </ion-content>
+    </ion-tab>
+</ion-tabs>
+<ion-cart-footer path='checkoutPath'></ion-cart-footer>
